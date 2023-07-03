@@ -1,3 +1,3 @@
 # Library-app
-Frontend: React
-Backend: Flask
+- Frontend: React
+- Backend: Flask
