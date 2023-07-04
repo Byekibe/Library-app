@@ -10,7 +10,6 @@ const Books = () => {
           try {
             const res = await fetch(url)
             const data = await res.json();
-            console.log(data.books)
             setBooks(data.books)
           } catch (error) {
             console.log(error);

@@ -1,33 +1,38 @@
 const BookTable = ({ books }) => {
     return (
         <>
-            <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                </tr>
-                {
+            <table className="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {
                         books.map(book => (
-                            <tr>
+                            <tr key={crypto.randomUUID()}>
                                 <td>
                                     {book.name}
                                 </td>
                                 <td>
                                     {book.author}
                                 </td>
+                                <td>
+                                    {book.price}
+                                </td>
+                                <td>
+                                    <button className="btn btn-sm btn-outline-secondary">
+                                        Add to Cart
+                                    </button>
+                                </td>
                             </tr>
                         ))
-                }
-                
-            </tbody>
+                    }
+                    
+                </tbody>
             </table>
         </>
     );
