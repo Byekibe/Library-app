@@ -1,7 +1,9 @@
+import Navbar from './Navbar.jsx';
+
 const Header = () => {
     return (
         <>
-        Header
+            <Navbar />
         </>
     )
 };
